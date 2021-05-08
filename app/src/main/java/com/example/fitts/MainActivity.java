@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
     private Spinner mySpinner;
     ArrayList<Integer> Levels = new ArrayList<Integer>();
     private int intCurrentLevel = 0;
-    int intSampleCount = 30;
+    int intSampleCount = 1;                                                 // Set The No. of trial
     int eachdistanceCount =10;
     int intDistance240Count =0;
     int intDistance440Count=0;
@@ -175,10 +175,10 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
                 btnStart = findViewById(R.id.btnStart);
                 rlLayout = findViewById(R.id.rlLayout);
                 btnStart.setBackgroundColor(Color.GREEN);
-                intRows =12;
-                intColumns=14  ;
-                intHeight = 80;
-                intWidth = 80;
+                intRows =10;                                                     // Set No.of rows as per your device
+                intColumns=8 ;                                                  //Set No.of columns as per your device
+                intHeight = 150;                                                // Set height in pixel
+                intWidth = 150;                                                 // Set width in pixel
                 distanceInPixel = 240;
                 intTargetX = getRandomNumber(0,intRows);
                 intTargetY = getRandomNumber(0,intColumns);
@@ -192,10 +192,10 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
                 ClearButtonView();
                 btnStart = findViewById(R.id.btnStart);
                 rlLayout = findViewById(R.id.rlLayout);
-                intRows =15;
-                intColumns=12;
-                intHeight=100;
-                intWidth =100;
+                intRows =15;                                        // Set No.of rows as per your device
+                intColumns=12;                                      // Set No.of rows as per your device
+                intHeight=100;                                      // Set height in pixel
+                intWidth =100;                                      // Set width in pixel
                 distanceInPixel = 240;
                 intTargetX = getRandomNumber(0,intRows);
                 intTargetY = getRandomNumber(0,intColumns);
@@ -209,10 +209,10 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
                 btnStart = findViewById(R.id.btnStart);
                 rlLayout = findViewById(R.id.rlLayout);
              //   btnEnd=findViewById(R.id.btnEnd);
-                intRows =30;
-                intColumns=24;
-                intHeight=50;
-                intWidth =50;
+                intRows =30;                                         // Set No.of rows as per your device
+                intColumns=24;                                       // Set No.of rows as per your device
+                intHeight=50;                                        // Set height in pixel
+                intWidth =50;                                         // Set width in pixel
                 distanceInPixel = 240;
                 intTargetX = getRandomNumber(0,intRows);
                 intTargetY = getRandomNumber(0,intColumns);
@@ -480,7 +480,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
     {
         RelativeLayout.LayoutParams lpParams = new RelativeLayout.LayoutParams(intWidth,intHeight);
 
-        lpParams.setMargins((intColumn*(10+intWidth)+20),(intRow* (intHeight+20))+700,20,10);
+        lpParams.setMargins((intColumn*(intWidth)+10),(intRow* (intHeight))+110,20,10);
         Button btn1 = new Button(this);
 
         btn1.setTag("btn" + String.valueOf(intRow) + "-" + String.valueOf(intColumn));
